@@ -11,12 +11,12 @@
 export default {
   data() {
     return {
-      goal: JSON.parse(localStorage.getItem('dailyGoal')) || 2000, // Загружаем сохраненные данные
+      goal: JSON.parse(localStorage.getItem('dailyGoal')) || 2000,
     };
   },
   methods: {
     updateGoal() {
-      localStorage.setItem('dailyGoal', JSON.stringify(this.goal)); // Сохраняем норму
+      localStorage.setItem('dailyGoal', JSON.stringify(this.goal));
       this.$emit('updateGoal', this.goal);
     },
   },
